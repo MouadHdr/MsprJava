@@ -1,4 +1,6 @@
 package com.company;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
@@ -6,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyWindow extends JDialog {
+
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -35,7 +38,6 @@ public class MyWindow extends JDialog {
 
     public void setMyText() {
         onOK();
-
     }
 
     public void onOK() {
@@ -50,5 +52,7 @@ public class MyWindow extends JDialog {
         UIManager.setLookAndFeel(new NimbusLookAndFeel());
         myWindow.setVisible(true);
         System.exit(0);
+
+        ObjectMapper mapper = new ObjectMapper();
     }
 }
