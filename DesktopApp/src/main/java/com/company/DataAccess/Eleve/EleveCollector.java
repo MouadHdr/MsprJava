@@ -1,4 +1,6 @@
-package com.company.DataAccess;
+package com.company.DataAccess.Eleve;
+
+import com.company.DataAccess.Eleve.EleveDao;
 
 public class EleveCollector {
 

@@ -1,6 +1,9 @@
-package com.company.DataAccess;
+package com.company.DataAccess.Personne;
 
-public class PersonneDao {
+import com.company.Abstractions.IEntity;
+
+public class PersonneDao implements IEntity {
+
     public String Nom;
     public String Prenom;
     public int Age;
@@ -12,5 +15,14 @@ public class PersonneDao {
         Prenom = prenom;
         Age = age;
         Taille = taille;
+    }
+
+    public PersonneDao() {
+
+    }
+
+    public String getNom()
+    {
+        return Nom;
     }
 }

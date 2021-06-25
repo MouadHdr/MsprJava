@@ -1,4 +1,6 @@
-package com.company.DataAccess;
+package com.company.DataAccess.Personne;
+
+import com.company.DataAccess.Personne.PersonneDao;
 
 public class PersonneCollector {
 

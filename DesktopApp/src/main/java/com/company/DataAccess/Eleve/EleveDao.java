@@ -1,6 +1,8 @@
-package com.company.DataAccess;
+package com.company.DataAccess.Eleve;
 
-public class EleveDao {
+import com.company.Abstractions.IEntity;
+
+public class EleveDao implements IEntity {
     public String Surnom;
     public int Age;
     public double MoyenneGenerale;
