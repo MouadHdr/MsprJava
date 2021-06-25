@@ -10,12 +10,14 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 
 public class MyWindow extends JDialog {
 
     private JPanel contentPane;
     private JButton buttonOK;
-    private JButton buttonCancel;
+    private JButton buttonCopie;
     private JTextField textField1;
     private JLabel ChainCara;
     public String jsontext;
@@ -32,6 +34,7 @@ public class MyWindow extends JDialog {
         this.setLocationRelativeTo(null);
 
         buttonOK.addActionListener(e -> onOK());
+        buttonCopie.addActionListener(e -> onCopiePaste());
         textField1.addActionListener(e -> DisplayPersonne());
     }
 
@@ -44,6 +47,13 @@ public class MyWindow extends JDialog {
         String tempoStringEleve= setTextInJson.ConvertToJson(new EleveCollector().CreateEleve());
 
         ChainCara.setText(tempoStringPersonne);
+    }
+
+    public void onCopiePaste()
+    {
+        StringSelection stringSelection = new StringSelection (ChainCara.getText());
+        Clipboard tempo = Toolkit.getDefaultToolkit ().getSystemClipboard ();
+        tempo.setContents (stringSelection, null);
     }
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException, JsonProcessingException {
