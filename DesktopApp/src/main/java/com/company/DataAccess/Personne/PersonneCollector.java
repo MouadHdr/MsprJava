@@ -13,4 +13,6 @@ public class PersonneCollector {
         PersonneDao personneDao = new PersonneDao("RAFAEL","Mouad", 21, 1.82);
         return personneDao;
     }
+
+
 }

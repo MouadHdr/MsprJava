@@ -60,7 +60,7 @@ public class MyWindow extends JDialog {
         PersonneDao perso = (PersonneDao)jsonConversionTools.JsonConvertToObject(Thejson, new PersonneCollector().CreatePersonne());
         perso.getNom();
 
-        ChainCara.setText(Thejson);
+        ChainCara.setText(tempoStringPersonne);
     }
 
     public void onCopiePaste()
